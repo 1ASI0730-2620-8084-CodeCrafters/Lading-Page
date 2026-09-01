@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BottleTrack Design System | CodeCrafters</title>
+    <meta name="description" content="Design system and style guidelines for BottleTrack, the bottled beverage transport tracking platform by CodeCrafters.">
+    <meta name="author" content="CodeCrafters">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/style-guide.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<main class="container style-guide" id="main">
+    <header class="style-guide__header">
+        <p class="eyebrow">CodeCrafters &middot; BottleTrack</p>
+        <h1>Design System</h1>
+        <p class="lead">The single source of truth for colors, typography, spacing and components across the landing page and the web application. Every value below is a CSS custom property declared in <code>assets/css/design-system.css</code>.</p>
+    </header>
+
+    <section class="style-guide__section" aria-labelledby="brand-heading">
+        <div class="style-guide__intro">
+            <h2 id="brand-heading">Brand ramp</h2>
+            <p>One ramp, three steps, separated by contrast rather than by hue. Only the two darker steps are legible as text on white: <code>--primary</code> is a background color that carries white text on top of it.</p>
+        </div>
+        <ul class="swatch-grid">
+            <li class="swatch">
+                <div class="swatch__sample" style="background: var(--primary)"></div>
+                <div class="swatch__body">
+                    <p class="swatch__name">--primary</p>
+                    <button class="swatch__value" type="button" data-copy="#f97316">#f97316</button>
+                    <p class="swatch__note">Brand orange &middot; 3.0:1 &middot; background only, never text</p>
+                </div>
+            </li>
+            <li class="swatch">
+                <div class="swatch__sample" style="background: var(--primary-mid)"></div>
+                <div class="swatch__body">
+                    <p class="swatch__name">--primary-mid</p>
+                    <button class="swatch__value" type="button" data-copy="#b34900">#b34900</button>
+                    <p class="swatch__note">First legible step &middot; 5.4:1 &middot; AA for body text</p>
+                </div>
+            </li>
+            <li class="swatch">
+                <div class="swatch__sample" style="background: var(--primary-dark)"></div>
+                <div class="swatch__body">
+                    <p class="swatch__name">--primary-dark</p>
+                    <button class="swatch__value" type="button" data-copy="#4f2000">#4f2000</button>
+                    <p class="swatch__note">Headings, hovers, accents &middot; 12.4:1</p>
+                </div>
+            </li>
+            <li class="swatch">
+                <div class="swatch__sample" style="background: var(--primary-soft)"></div>
+                <div class="swatch__body">
+                    <p class="swatch__name">--primary-soft</p>
+                    <button class="swatch__value" type="button" data-copy="#ffedd5">#ffedd5</button>
+                    <p class="swatch__note">Tinted background for ghost buttons and highlights</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="style-guide__section" aria-labelledby="surface-heading">
+        <div class="style-guide__intro">
+            <h2 id="surface-heading">Surfaces and text</h2>
+            <p>A muted surface is always painted with an opaque color, never with a translucent veil, so that nothing behind it bleeds through.</p>
+        </div>
+        <ul class="swatch-grid">
+            <li class="swatch">
+                <div class="swatch__sample" style="background: var(--background)"></div>
+                <div class="swatch__body">
+                    <p class="swatch__name">--background / --surface</p>
+                    <button class="swatch__value" type="button" data-copy="#ffffff">#ffffff</button>
+                    <p class="swatch__note">Page background and raised cards</p>
+                </div>
+            </li>
+            <li class="swatch">
+                <div class="swatch__sample" style="background: var(--surface-muted)"></div>
+                <div class="swatch__body">
+                    <p class="swatch__name">--surface-muted</p>
+                    <button class="swatch__value" type="button" data-copy="#f6f2ef">#f6f2ef</button>
+                    <p class="swatch__note">Second plane: alternating sections, quiet panels</p>
+                </div>
+            </li>
+            <li class="swatch">
+                <div class="swatch__sample" style="background: var(--foreground)"></div>
+                <div class="swatch__body">
+                    <p class="swatch__name">--foreground</p>
+                    <button class="swatch__value" type="button" data-copy="#303030">#303030</button>
+                    <p class="swatch__note">General dark, replaces pure black across the UI</p>
+                </div>
+            </li>
+            <li class="swatch">
+                <div class="swatch__sample" style="background: var(--chrome)"></div>
+                <div class="swatch__body">
+                    <p class="swatch__name">--chrome</p>
+                    <button class="swatch__value" type="button" data-copy="#202020">#202020</button>
+                    <p class="swatch__note">Dark chrome: footer and application shell</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="style-guide__section" aria-labelledby="lines-heading">
+        <div class="style-guide__intro">
+            <h2 id="lines-heading">Lines</h2>
+            <p>Four roles ordered by hierarchy, not by tone. A divider inside a surface does not weigh the same as the border of a card, and a clickable card asks for more presence than a static one.</p>
+        </div>
+        <ul class="token-list">
+            <li>
+                <span class="status-preview" aria-hidden="true"><span style="background: var(--line)"></span></span>
+                <code class="token-list__label">--line</code>
+                <span class="token-list__role">Divider inside a surface: list rows, separators</span>
+            </li>
+            <li>
+                <span class="status-preview" aria-hidden="true"><span style="background: var(--border)"></span></span>
+                <code class="token-list__label">--border</code>
+                <span class="token-list__role">Default border of a surface</span>
+            </li>
+            <li>
+                <span class="status-preview" aria-hidden="true"><span style="background: var(--control)"></span></span>
+                <code class="token-list__label">--control</code>
+                <span class="token-list__role">Border of an interactive element at rest</span>
+            </li>
+            <li>
+                <span class="status-preview" aria-hidden="true"><span style="background: var(--control-hover)"></span></span>
+                <code class="token-list__label">--control-hover</code>
+                <span class="token-list__role">The same element under the cursor</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="style-guide__section" aria-labelledby="status-heading">
+        <div class="style-guide__intro">
+            <h2 id="status-heading">Status</h2>
+            <p>Four roles, three pieces each: the solid one for dots and bars, the strong one for hover and for text on top of the soft one, and the soft one for chip backgrounds. The <code>soft</code> plus <code>strong</code> pairing passes AA by design. Success keeps a green of its own and warning moves to amber, so that neither collides with the orange brand.</p>
+        </div>
+        <ul class="token-list">
+            <li>
+                <span class="status-preview" aria-hidden="true">
+                    <span style="background: var(--danger-soft)"></span>
+                    <span style="background: var(--danger)"></span>
+                    <span style="background: var(--danger-strong)"></span>
+                </span>
+                <code class="token-list__label">danger</code>
+                <span class="token-list__role">Broken bottles, failed delivery, critical incident</span>
+                <span class="chip chip--danger">Critical</span>
+            </li>
+            <li>
+                <span class="status-preview" aria-hidden="true">
+                    <span style="background: var(--warning-soft)"></span>
+                    <span style="background: var(--warning)"></span>
+                    <span style="background: var(--warning-strong)"></span>
+                </span>
+                <code class="token-list__label">warning</code>
+                <span class="token-list__role">Delayed route, temperature out of range, pending review</span>
+                <span class="chip chip--warning">Delayed</span>
+            </li>
+            <li>
+                <span class="status-preview" aria-hidden="true">
+                    <span style="background: var(--success-soft)"></span>
+                    <span style="background: var(--success)"></span>
+                    <span style="background: var(--success-strong)"></span>
+                </span>
+                <code class="token-list__label">success</code>
+                <span class="token-list__role">Delivered, incident resolved, sensor within range</span>
+                <span class="chip chip--success">Delivered</span>
+            </li>
+            <li>
+                <span class="status-preview" aria-hidden="true">
+                    <span style="background: var(--info-soft)"></span>
+                    <span style="background: var(--info)"></span>
+                    <span style="background: var(--info-strong)"></span>
+                </span>
+                <code class="token-list__label">info</code>
+                <span class="token-list__role">In transit, informational notice</span>
+                <span class="chip chip--info">In transit</span>
+            </li>
+        </ul>
+    </section>
+
+    <section class="style-guide__section" aria-labelledby="alpha-heading">
+        <div class="style-guide__intro">
+            <h2 id="alpha-heading">Alpha scales</h2>
+            <p>Five steps for text and four for fills. Any value outside these nine is drift.</p>
+        </div>
+        <div class="alpha-list">
+            <ul class="token-list">
+                <li><span class="token-list__label" style="color: var(--ink-80); font-weight: var(--weight-bold)">Aa --ink-80</span><span class="token-list__role">Emphasis</span></li>
+                <li><span class="token-list__label" style="color: var(--ink-70); font-weight: var(--weight-bold)">Aa --ink-70</span><span class="token-list__role">Supporting body copy</span></li>
+                <li><span class="token-list__label" style="color: var(--ink-60); font-weight: var(--weight-bold)">Aa --ink-60</span><span class="token-list__role">Descriptions, helper text</span></li>
+                <li><span class="token-list__label" style="color: var(--ink-50); font-weight: var(--weight-bold)">Aa --ink-50</span><span class="token-list__role">Metadata: dates, counters</span></li>
+                <li><span class="token-list__label" style="color: var(--ink-40); font-weight: var(--weight-bold)">Aa --ink-40</span><span class="token-list__role">Placeholders, dimmed icons</span></li>
+            </ul>
+            <ul class="token-list">
+                <li><span class="fill-sample" style="background: var(--fill-5)"></span><code class="token-list__label">--fill-5</code><span class="token-list__role">Hover veil</span></li>
+                <li><span class="fill-sample" style="background: var(--fill-10)"></span><code class="token-list__label">--fill-10</code><span class="token-list__role">Chip, progress bar</span></li>
+                <li><span class="fill-sample" style="background: var(--fill-20)"></span><code class="token-list__label">--fill-20</code><span class="token-list__role">Strong fill, bar track</span></li>
+                <li><span class="fill-sample" style="background: var(--fill-40)"></span><code class="token-list__label">--fill-40</code><span class="token-list__role">Solid dot or marker</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="style-guide__section" aria-labelledby="type-heading">
+        <div class="style-guide__intro">
+            <h2 id="type-heading">Typography</h2>
+            <p>Manrope for the whole interface, with a system sans fallback. Headings use <code>--primary-dark</code>; body copy uses <code>--foreground</code>.</p>
+        </div>
+        <ul class="type-scale">
+            <li><code class="type-scale__meta">--text-5xl / 700</code><span style="font-size: var(--text-5xl); font-weight: var(--weight-bold); line-height: var(--leading-tight)">Track every bottle</span></li>
+            <li><code class="type-scale__meta">--text-4xl / 700</code><span style="font-size: var(--text-4xl); font-weight: var(--weight-bold)">Page heading</span></li>
+            <li><code class="type-scale__meta">--text-3xl / 700</code><span style="font-size: var(--text-3xl); font-weight: var(--weight-bold)">Section heading</span></li>
+            <li><code class="type-scale__meta">--text-xl / 700</code><span style="font-size: var(--text-xl); font-weight: var(--weight-bold)">Card title</span></li>
+            <li><code class="type-scale__meta">--text-lg / 400</code><span style="font-size: var(--text-lg)">Lead paragraph for section introductions</span></li>
+            <li><code class="type-scale__meta">--text-base / 400</code><span style="font-size: var(--text-base)">Body copy, the default reading size</span></li>
+            <li><code class="type-scale__meta">--text-sm / 400</code><span style="font-size: var(--text-sm)">Secondary copy, labels and buttons</span></li>
+            <li><code class="type-scale__meta">--text-xs / 400</code><span style="font-size: var(--text-xs)">Metadata, captions and chips</span></li>
+        </ul>
+    </section>
+
+    <section class="style-guide__section" aria-labelledby="space-heading">
+        <div class="style-guide__intro">
+            <h2 id="space-heading">Spacing</h2>
+            <p>A four pixel base step. Layout gaps use the scale directly, never arbitrary values.</p>
+        </div>
+        <ul class="space-scale">
+            <li><code class="type-scale__meta">--space-1 &middot; 4px</code><span class="space-scale__bar" style="width: var(--space-1)"></span></li>
+            <li><code class="type-scale__meta">--space-2 &middot; 8px</code><span class="space-scale__bar" style="width: var(--space-2)"></span></li>
+            <li><code class="type-scale__meta">--space-4 &middot; 16px</code><span class="space-scale__bar" style="width: var(--space-4)"></span></li>
+            <li><code class="type-scale__meta">--space-6 &middot; 24px</code><span class="space-scale__bar" style="width: var(--space-6)"></span></li>
+            <li><code class="type-scale__meta">--space-8 &middot; 32px</code><span class="space-scale__bar" style="width: var(--space-8)"></span></li>
+            <li><code class="type-scale__meta">--space-12 &middot; 48px</code><span class="space-scale__bar" style="width: var(--space-12)"></span></li>
+            <li><code class="type-scale__meta">--space-16 &middot; 64px</code><span class="space-scale__bar" style="width: var(--space-16)"></span></li>
+            <li><code class="type-scale__meta">--space-20 &middot; 80px</code><span class="space-scale__bar" style="width: var(--space-20)"></span></li>
+            <li><code class="type-scale__meta">--space-24 &middot; 96px</code><span class="space-scale__bar" style="width: var(--space-24)"></span></li>
+        </ul>
+    </section>
+
+    <section class="style-guide__section" aria-labelledby="shape-heading">
+        <div class="style-guide__intro">
+            <h2 id="shape-heading">Radius and elevation</h2>
+            <p>Elevation is reserved for elements that genuinely float: hovered cards and overlays. A static card is defined by its border, not by a shadow.</p>
+        </div>
+        <div class="specimen-row">
+            <div class="radius-sample" style="border-radius: var(--radius-sm)"></div>
+            <div class="radius-sample" style="border-radius: var(--radius-md)"></div>
+            <div class="radius-sample" style="border-radius: var(--radius-lg)"></div>
+            <div class="radius-sample" style="border-radius: var(--radius-xl)"></div>
+        </div>
+        <div class="specimen-row">
+            <div class="shadow-sample" style="box-shadow: var(--shadow-sm)"></div>
+            <div class="shadow-sample" style="box-shadow: var(--shadow-md)"></div>
+            <div class="shadow-sample" style="box-shadow: var(--shadow-lg)"></div>
+        </div>
+    </section>
+
+    <section class="style-guide__section" aria-labelledby="components-heading">
+        <div class="style-guide__intro">
+            <h2 id="components-heading">Components</h2>
+            <p>The building blocks shared by the landing page and the web application. A disabled control sits at low contrast on purpose, so that it reads as inert.</p>
+        </div>
+        <div class="specimen-row">
+            <button class="button button--primary" type="button">Track a shipment</button>
+            <button class="button button--secondary" type="button">View documentation</button>
+            <button class="button button--ghost" type="button">Learn more</button>
+            <button class="button" type="button" disabled>Unavailable</button>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr))">
+            <article class="card">
+                <h3>Static card</h3>
+                <p class="muted">Defined by its border. Used for content that is read, not clicked.</p>
+            </article>
+            <article class="card card--interactive">
+                <h3>Interactive card</h3>
+                <p class="muted">Stronger border at rest and elevation on hover, because it can be clicked.</p>
+            </article>
+            <div class="card">
+                <div class="field">
+                    <label for="plate">Vehicle plate</label>
+                    <input class="input" id="plate" type="text" placeholder="ABC-123">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="assets/js/style-guide.js"></script>
+</body>
+</html>
