@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BottleTrack | Bottled beverage transport tracking and IoT monitoring</title>
+    <meta name="description" content="BottleTrack lets beverage distributors follow every route in real time, monitor cargo with IoT sensors and report transport incidents with evidence.">
+    <meta name="keywords" content="beverage logistics, fleet tracking, IoT monitoring, cold chain, delivery incidents, transport management">
+    <meta name="author" content="CodeCrafters">
+    <meta property="og:title" content="BottleTrack | Bottled beverage transport tracking">
+    <meta property="og:description" content="Follow every route in real time, monitor cargo with IoT sensors and report transport incidents with evidence.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_419">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="nav.skip">Skip to main content</a>
+
+<header class="site-header">
+    <div class="container site-header__inner">
+        <a class="brand" href="#main">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span class="brand__name">BottleTrack</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+            <span class="visually-hidden" data-i18n="nav.toggle">Open navigation</span>
+            <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+            <a href="#features" data-i18n="nav.features">Features</a>
+            <a href="#how-it-works" data-i18n="nav.how">How it works</a>
+            <a href="#segments" data-i18n="nav.segments">Who it is for</a>
+            <a href="#product-video" data-i18n="nav.product">The product</a>
+            <div class="language-switch" role="group" aria-label="Language">
+                <button type="button" data-language="en" aria-pressed="true">EN</button>
+                <button type="button" data-language="es" aria-pressed="false">ES</button>
+            </div>
+            <a class="button button--primary" href="#segments" data-i18n="nav.cta">Get started</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <section class="hero">
+        <div class="container hero__inner">
+            <div class="hero__copy">
+                <p class="eyebrow" data-i18n="hero.eyebrow">CodeCrafters presents BottleTrack</p>
+                <h1 data-i18n="hero.title">Every bottle, tracked from the plant to the customer</h1>
+                <p class="lead" data-i18n="hero.lead">Beverage distributors lose product on the road and only find out when the truck comes back. BottleTrack follows each route in real time, reads the IoT sensors on the cargo and turns every incident into traceable evidence.</p>
+                <div class="hero__actions">
+                    <a class="button button--primary" href="#segments" data-i18n="hero.primaryCta">Track your fleet</a>
+                    <a class="button button--secondary" href="#how-it-works" data-i18n="hero.secondaryCta">See how it works</a>
+                </div>
+            </div>
+
+            <figure class="hero__panel" aria-labelledby="hero-panel-caption">
+                <div class="panel">
+                    <div class="panel__row">
+                        <span class="panel__label">Route SR-104</span>
+                        <span class="chip chip--info" data-i18n="hero.panel.inTransit">In transit</span>
+                    </div>
+                    <div class="panel__row">
+                        <span class="panel__label" data-i18n="hero.panel.temperature">Cargo temperature</span>
+                        <span class="panel__value">6.4 &deg;C</span>
+                    </div>
+                    <div class="panel__row">
+                        <span class="panel__label" data-i18n="hero.panel.impact">Impact detected</span>
+                        <span class="chip chip--warning" data-i18n="hero.panel.review">Needs review</span>
+                    </div>
+                    <div class="panel__row">
+                        <span class="panel__label" data-i18n="hero.panel.delivered">Stops delivered</span>
+                        <span class="panel__value">12 / 15</span>
+                    </div>
+                    <div class="panel__progress" role="img" aria-label="80 percent of the route completed">
+                        <span style="width: 80%"></span>
+                    </div>
+                </div>
+                <figcaption class="muted" id="hero-panel-caption" data-i18n="hero.panel.caption">Live view of a route in the BottleTrack web application.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section section--muted" aria-labelledby="problem-title">
+        <div class="container stack">
+            <p class="eyebrow" data-i18n="problem.eyebrow">The problem</p>
+            <h2 id="problem-title" data-i18n="problem.title">Losses on the road are discovered too late</h2>
+            <p class="lead" data-i18n="problem.lead">Between the bottling plant and the point of sale, the cargo travels blind. Nobody knows where the truck is, at what temperature the product is riding, or what happened to the bottles that never arrived.</p>
+            <ul class="figure-grid">
+                <li class="card">
+                    <p class="figure-grid__value" data-i18n="problem.one.value">No visibility</p>
+                    <p class="muted" data-i18n="problem.one.text">Supervisors follow up by phone calls and messages, with no record of what was said.</p>
+                </li>
+                <li class="card">
+                    <p class="figure-grid__value" data-i18n="problem.two.value">No evidence</p>
+                    <p class="muted" data-i18n="problem.two.text">Broken or missing bottles are reported verbally, so the loss cannot be traced back to a moment or a place.</p>
+                </li>
+                <li class="card">
+                    <p class="figure-grid__value" data-i18n="problem.three.value">No data</p>
+                    <p class="muted" data-i18n="problem.three.text">Temperature and rough handling go unmeasured, so the same failures repeat trip after trip.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title">
+        <div class="container stack">
+            <p class="eyebrow" data-i18n="features.eyebrow">What BottleTrack does</p>
+            <h2 id="features-title" data-i18n="features.title">Two capabilities that close the loop</h2>
+            <div class="feature-grid">
+                <article class="card">
+                    <h3 data-i18n="features.tracking.title">Delivery tracking and IoT monitoring</h3>
+                    <p class="muted" data-i18n="features.tracking.text">Follow the progress of the route and read the transport data straight from the devices installed on the vehicle and the cargo.</p>
+                    <ul class="check-list">
+                        <li data-i18n="features.tracking.one">Vehicle location and route progress, stop by stop</li>
+                        <li data-i18n="features.tracking.two">Cargo temperature, with alerts when it leaves the safe range</li>
+                        <li data-i18n="features.tracking.three">Impacts and rough movements detected by the sensors on board</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3 data-i18n="features.incidents.title">Incident reporting with evidence</h3>
+                    <p class="muted" data-i18n="features.incidents.text">The driver reports what happens during the trip, and the supervisor receives it with everything needed to follow up.</p>
+                    <ul class="check-list">
+                        <li data-i18n="features.incidents.one">Damaged product, broken bottles, missing units and delays</li>
+                        <li data-i18n="features.incidents.two">Photographic evidence attached to the stop where it happened</li>
+                        <li data-i18n="features.incidents.three">Follow-up status until the supervisor closes the case</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--muted" id="how-it-works" aria-labelledby="how-title">
+        <div class="container stack">
+            <p class="eyebrow" data-i18n="how.eyebrow">How it works</p>
+            <h2 id="how-title" data-i18n="how.title">Three steps, from dispatch to closure</h2>
+            <ol class="step-list">
+                <li class="card">
+                    <span class="step-list__number" aria-hidden="true">1</span>
+                    <h3 data-i18n="how.one.title">Dispatch the route</h3>
+                    <p class="muted" data-i18n="how.one.text">The supervisor registers the shipment, the vehicle and the stops it has to cover.</p>
+                </li>
+                <li class="card">
+                    <span class="step-list__number" aria-hidden="true">2</span>
+                    <h3 data-i18n="how.two.title">Monitor the trip</h3>
+                    <p class="muted" data-i18n="how.two.text">The IoT devices report location, temperature and impacts while the driver advances through the stops.</p>
+                </li>
+                <li class="card">
+                    <span class="step-list__number" aria-hidden="true">3</span>
+                    <h3 data-i18n="how.three.title">Resolve the incidents</h3>
+                    <p class="muted" data-i18n="how.three.text">Any problem is reported with evidence and stays open until the supervisor closes it.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="section" id="segments" aria-labelledby="segments-title">
+        <div class="container stack">
+            <p class="eyebrow" data-i18n="segments.eyebrow">Who it is for</p>
+            <h2 id="segments-title" data-i18n="segments.title">One platform, three ways in</h2>
+            <div class="feature-grid">
+                <article class="card card--interactive">
+                    <h3 data-i18n="segments.supervisor.title">Logistics supervisors</h3>
+                    <p class="muted" data-i18n="segments.supervisor.text">Follow the whole fleet on one board, react to alerts while the truck is still on the road and close incidents with a record behind them.</p>
+                    <a class="button button--primary" href="https://bottletrack.vercel.app/monitoring" data-i18n="segments.supervisor.cta">Monitor your fleet</a>
+                </article>
+                <article class="card card--interactive">
+                    <h3 data-i18n="segments.driver.title">Drivers and delivery crews</h3>
+                    <p class="muted" data-i18n="segments.driver.text">Report a broken bottle, a missing unit or a delay from the phone, attach the evidence and move on to the next stop.</p>
+                    <a class="button button--primary" href="https://bottletrack.vercel.app/incidents/new" data-i18n="segments.driver.cta">Report an incident</a>
+                </article>
+                <article class="card card--interactive">
+                    <h3 data-i18n="segments.manager.title">Distribution managers</h3>
+                    <p class="muted" data-i18n="segments.manager.text">Measure product loss, delivery compliance and recurring failures to decide where the operation needs to change.</p>
+                    <a class="button button--primary" href="https://bottletrack.vercel.app/analytics" data-i18n="segments.manager.cta">See the indicators</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--muted" id="product-video" aria-labelledby="video-title">
+        <div class="container stack">
+            <p class="eyebrow" data-i18n="video.eyebrow">About the product</p>
+            <h2 id="video-title" data-i18n="video.title">See BottleTrack in two minutes</h2>
+            <p class="lead" data-i18n="video.lead">A short walkthrough of the business model and the main features of the platform.</p>
+            <div class="video-frame" data-video-placeholder>
+                <p class="muted" data-i18n="video.placeholder">The About the Product video will be embedded here.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container site-footer__inner">
+        <div class="stack">
+            <a class="brand brand--inverse" href="#main">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__name">BottleTrack</span>
+            </a>
+            <p class="site-footer__text" data-i18n="footer.tagline">Bottled beverage transport tracking, built by CodeCrafters.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+            <a href="#features" data-i18n="nav.features">Features</a>
+            <a href="#segments" data-i18n="nav.segments">Who it is for</a>
+            <a href="terms-of-service.html" data-i18n="footer.terms">Terms and conditions of service</a>
+        </nav>
+    </div>
+    <div class="container site-footer__legal">
+        <p data-i18n="footer.copyright">&copy; 2026 CodeCrafters. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="assets/js/translations.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
