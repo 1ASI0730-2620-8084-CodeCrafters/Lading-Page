@@ -39,7 +39,7 @@ Open `index.html` directly in a browser, or serve the folder with any static ser
 
 ## Deployment
 
-Published on Netlify from the `main` branch.
+Published on GitHub Pages from the `main` branch.
 
 The calls to action of each target segment point to the web application deployed on Vercel. The base URL lives in the `href` of those links in `index.html` and must be updated once the final domain is known.
 
