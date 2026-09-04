@@ -14,23 +14,34 @@ Course: 1ASI0730 Aplicaciones Web · Universidad Peruana de Ciencias Aplicadas.
 ## Structure
 
 ```
+index.html              home page
+terms-of-service.html   terms and conditions, linked from the footer
+style-guide.html        living documentation of the design system
 assets/
   css/
-    tokens.css        design tokens: color, typography, spacing, radius, elevation
-    base.css          reset, element defaults and layout utilities
-    components.css    shared components: button, card, chip, input, skip link
-    style-guide.css   styles specific to the style guide page
+    tokens.css          design tokens: color, typography, spacing, radius, elevation
+    base.css            reset, element defaults and layout utilities
+    components.css      shared components: button, card, chip, input, skip link
+    layout.css          site header, navigation and footer
+    landing.css         home page sections
+    legal.css           terms and conditions page
+    style-guide.css     style guide page
   js/
-style-guide.html      living documentation of the design system
+    translations.js     English and Spanish dictionaries
+    i18n.js             language resolution, switching and persistence
+    main.js             responsive navigation
+    style-guide.js      copy to clipboard for color tokens
 ```
 
 ## Running locally
 
-Open `style-guide.html` directly in a browser, or serve the folder with any static server.
+Open `index.html` directly in a browser, or serve the folder with any static server.
 
 ## Deployment
 
-Published on Netlify from the `main` branch.
+Published on GitHub Pages from the `main` branch.
+
+The calls to action of each target segment point to the web application deployed on Vercel. The base URL lives in the `href` of those links in `index.html` and must be updated once the final domain is known.
 
 ## Conventions
 
